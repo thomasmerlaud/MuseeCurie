@@ -1,0 +1,140 @@
+
+footer{
+  background-color: #F0F0F0;
+  box-sizing:content-box;
+  
+}
+
+* {
+  font-family: avenir next demi bold;
+  text-decoration: none;
+}
+h2 {
+  font-size: 50px;
+}
+p {
+  font-family: avenir next regular;
+  font-size: 25px;
+}
+
+body{
+  text-decoration: none;
+}
+
+h1 > i {
+
+  font-family: baskersvville;
+  font-size: 150px;
+  display: flex;
+  justify-content: center;
+  color :black;
+}
+
+li {
+  font-family: avenir next regular;
+}
+ul {
+
+  text-decoration:none;
+  color: black;
+  list-style: none;
+}
+
+a {
+  color: black;
+  font-family: avenir next regular;
+  text-decoration: underline;
+}
+
+header {
+  display: flex;
+  align-items: center;
+}
+.navbar > ul {
+  display: flex;
+  gap: 25px;
+  font-size: 20px;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+.navbar{
+  display: flex;
+  flex-grow: 1;
+
+}
+
+.langue {
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.ecran_accueil {
+  background-image: url("marie.svg");
+  background-repeat: no-repeat;
+}
+
+button {
+  color: white;
+  border-style: none;
+  background-color: black;
+  display: flex;
+  padding: 10px;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.carte {
+  width: 486px;
+  height: 267px;
+}
+
+.contactez_nous {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+}
+
+.footer_column {
+  font-size: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.liste_footer {
+  padding: 0%;
+}
+
+.footer_p {
+  padding-top: 50px;
+  padding-left: 40px;
+  padding-right: 40px; 
+}
+
+.logo_footer {
+  width: 105px;
+  height: 88px;
+  padding-left: 40px;
+}
+
+.mentions {
+  font-size: 25px;
+  font-family: avenir next medium;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 40px;
+}
+
+.liste2_footer {
+  font-family: avenir next demi bold;
+  display: flex;
+  padding-right: 40px;
+  gap: 25px;
+}
+
