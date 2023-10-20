@@ -63,7 +63,7 @@ display: flex;
 align-items: center;
 background:linear-gradient(rgb(255, 255, 255,100%),75%,rgba(255,255,255,0%));
 height: 100px;
-justify-content: space-between;
+
 
 }
 
@@ -81,6 +81,7 @@ margin-top:-10px;
 
 .navbar{
   display: flex;
+  flex-grow: 1;
 }
 
 .langue {
@@ -121,8 +122,6 @@ button {
   padding-block: 5px;
 }
 
-
-
 .homepage {
   color: white;
   border-width: 1px;
@@ -158,7 +157,7 @@ button {
 
 .white_gradient {
   background: linear-gradient(rgba(255,255,255,2%),30%,rgba(255,255,255,100%));
-  width: 100%;
+  width: 1400px;
   height: 100px;
 }
 
@@ -202,6 +201,11 @@ button {
   transform: scaleX(1);
   transform-origin: left;
 }
+
+
+
+
+
 
 
 
@@ -256,6 +260,7 @@ button {
 
 
 
+
 h3 {
   font-family: 'Avenir Next medium';
   margin-inline: 0px;
@@ -294,35 +299,21 @@ img{
 }
 
 #container {
-  height: 607px;
+
   margin-inline: 120px;
 }
 
-#container img {
-  height: 100%;
-  object-fit: cover;
-}
+#controls-carousel {
 
-.button-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.carousel-button button {
-  background-color: rgba(1,1,1 ,0.5);
-}
-
-.carousel-button button[aria-current='true'] {
-  background-color: rgba(1,1,1, 1);
 }
 
 .carousel-caption {
   position: absolute;
+  top: 200px;
   left: 0;
   right: 800px;
   bottom: 0;
-  width: 100%;
+  width: 1500px;
   height:200px;
   display: flex;
   flex-direction: column;
@@ -335,13 +326,19 @@ img{
 
 .caption-text {
   font-size: 15px;
+  color: transparent;
   line-height: 1.5;
-  padding-left: 75px;
 }
 
 .carousel-caption:hover{
   background-color: rgba(1,1,1,0.5);
   transition: 1s ;
+}
+.carousel-caption:hover .caption-text {
+  display: flex;  
+  color: white;
+  transition: 1s;
+  margin-left: 75px;
 }
 
 
@@ -350,7 +347,6 @@ img{
   margin-left:8%;
 
 }
-
 
 
 .billeterie {
@@ -385,8 +381,6 @@ img{
   -webkit-transform: translate(0px,5px); 
   border-bottom: 1px solid;
 }
-
-
 .gallery {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -438,21 +432,6 @@ img{
   font-size: 20px;
   line-height: 1.2;
   padding: 30px;
-}
-
-.p_ressource5 {
-  font-size: 20px;
-  line-height: 1.2;
-  padding: 30px;
-  height: 280px;
-}
-
-.p_ressource7 {
-  font-size: 20px;
-  line-height: 1.2;
-  padding: 30px;
-  height: 230px;
-
 }
 
 .gallery__item--1 {
@@ -509,7 +488,7 @@ img{
   padding: 30px;
 }
 
-.gallery__item--3:hover p{
+.gallery__item--3:hover {
   color:white;
   transition: 0.7s;
   
@@ -523,13 +502,13 @@ img{
 }
 
 .gallery__item--4 p{
-  color:transparent;
+  display: none;
+  color:white;
   padding: 30px;
 }
 
 .gallery__item--4:hover p{
-  color: white;
-  transition: 0.7s;
+  display: block;
   
   }
 
@@ -540,17 +519,6 @@ img{
 
 }
 
-.gallery__item--5 p{
-  color:transparent;
-  padding: 30px;
-}
-
-.gallery__item--5:hover p{
-  color: white;
-  transition: 0.7s;
-  
-  }
-
 .gallery__item--6 {
   grid-column: 5 / 8;
   grid-row: 8 / 13;
@@ -558,35 +526,12 @@ img{
 
 }
 
-.gallery__item--6 p{
-  color:transparent;
-  padding: 30px;
-}
-
-.gallery__item--6:hover p{
-  color: white;
-  transition: 0.7s;
-  
-  }
-
-
 .gallery__item--7 {
   grid-column: 8 / 13;
   grid-row: 7 / 13;
   background-image: url("img/index/ressou7.svg");
 
 }
-
-.gallery__item--7 p{
-  color:transparent;
-  padding: 30px;
-}
-
-.gallery__item--7:hover p{
-  color: white;
-  transition: 0.7s;
-  
-  }
 
 .ress {
 
@@ -610,6 +555,7 @@ font-family: "avenir next demi bold";
 margin-bottom: 20px;
 
 }
+
 
 
 
@@ -730,35 +676,54 @@ margin-bottom: 20px;
 
 
 
-.navbar {
-  text-align: center; /* Centre le texte horizontalement */
+
+@media (max-width: 670px) { 
+
+
+  .gallery {
+    display: block;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 1fr);
+    grid-row-gap: 3px;
+    }
+
+  .gallery article h3 {
+    font-size: 30px;
+    padding: 30px;
+  }
+
+  .gallery__item{
+    margin-top: 6px;
+    width: 100%;
+  }
+
+
+
+
+  .footer_column {
+    display: block;
+    
+  }
+
+  .footer_column h5{
+    border-bottom: solid 2px black;
+  }
+
+  .footer_column h5:hover li{
+    display: block;
+  }
+
+  .liste_footer{
+    display:none;
+  }
+  .liste_footer:hover {
+    display: block; 
+    background-color: red;
+  
+  }
+
+  
 }
-
-.menu-toggle {
-  display: none; /* Masque le menu burger par défaut */
-  cursor: pointer;
-}
-
-.menu {
-  list-style-type: none; /* Supprime les puces de la liste */
-  padding: 0; /* Supprime le remplissage par défaut de la liste */
-}
-
-.menu li {
-  display: inline; /* Affiche les éléments de liste en ligne horizontalement */
-  margin: 0 20px; /* Ajoute une marge à droite et à gauche des éléments de liste */
-}
-
-.menu a {
-  text-decoration: none; /* Supprime les soulignements des liens */
-  color: black; /* Couleur du texte des liens */
-}
-
-
-
-
-
-
 
 
 .navbar {
@@ -787,9 +752,23 @@ margin-bottom: 20px;
 
 /* Médias CSS pour le menu burger en mode mobile */
 @media (max-width: 768px) {
- 
+  .menu {
+      display: none; /* Cache le menu en mode mobile */
+  }
+
+  .menu-toggle {
+      display: block; /* Affiche le menu burger en mode mobile */
+  }
+
+  .menu-toggle:hover + .menu {
+      display: block; /* Affiche le menu lorsqu'on survole le menu burger */
+  }
+
+
 
   .booking {
+    margin-top: 600px;;
+    margin-inline: 100px;
     font-family: avenir next;
     margin-bottom: 10px;
 }
@@ -869,6 +848,7 @@ margin-bottom: 20px;
 
 .contactez_nous {
   margin-top: 10px;
+  margin-left: 150px;
 }
 
 .line3 {
@@ -894,166 +874,3 @@ margin-bottom: 20px;
 
 
 
-@media (max-width: 670px) { 
-
-  header {
-    justify-content: space-between;
-    padding-inline: 13px;
-  }
-
-  .logo_top {
-    padding: 0;
-  }
-
-  .navbar > ul {
-    display: none; /* Cache le menu en mode mobile */
-    margin-top: 200px;
-  }
-
-  .langue {
-    display: none;
-  }
-
-  .menu-toggle {
-    display: block; /* Affiche le menu burger en mode mobile */
-  }
-
-  .menu-toggle:hover+ .menu {
-    display: block; /* Affiche le menu lorsqu'on survole le menu burger */
-  }
-
-  .navbar{
-
-    font-size: 15px;
-
-  }
-  
-  .ecran_accueil{
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding-bottom: 230px;
-  }
-  
-  .bigtitle{
-  
-    font-size: 50px;
-    text-align: center;
-    margin-bottom: 30px;
-    white-space: nowrap;
-  
-  }
-  
-  .homepage{
-  
-    display: flex;
-    white-space: nowrap;
-    align-items: center;
-    margin-inline: 30px;
-  }
-  
-  .booking {
-    margin-inline: 0;
-    padding-top: 100px;
-  }
-
-  #container {
-    height: 384px;
-    margin-inline: 16px;
-  }
-
-  .title  {
-    margin-top: 0;
-    margin-left: 0;
-    font-size: 30px;
-  }
-
-  .carousel-caption:hover .caption-text {
-    margin-left: 0;
-  }
-
-  .caption-text {
-    padding-left: 0;
-    text-overflow:ellipsis;
-  }
-
-  .carousel-caption {
-    padding: 16px;
-    font-size: 14px;
-    line-height: 1.2;
-  }
-
-/*la gallerie*/
-
-  .gallery {
-    display: block;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(7, 1fr);
-    grid-row-gap: 3px;
-    }
-
-  .gallery article h3 {
-    font-size: 30px;
-    padding: 30px;
-  }
-
-  .gallery__item{
-    margin-top: 6px;
-    width: 100%;
-  }
-
-  .p_ressource {
-    display: none;
-  }
-
-  .p_ressource5{
-  display: none;
-  }
-
-  .p_ressource7{
-    display: none;
-    }
-
-  .contactez_nous {
-    margin-left: 0;
-    align-items: center;
-  }
-
-/*le footer*/
-
-  .footer_column {
-    display: block;
-    
-  }
-
-  .footer_column h5{
-    border-bottom: solid 2px black;
-  }
-
-  .footer_column h5:hover li{
-    display: block;
-  }
-
-  .liste_footer{
-    display:none;
-  }
-  .liste_footer:hover {
-    display: block; 
-    background-color: red;
-  }
-
-  .liste2_footer {
-    flex-direction: column;
-  }
-
-  .liste2_footer li {
-    text-align: center;
-  }
-
-  .logo_footer{
-
-    justify-content: center;
-    margin-inline: 175px;
-    margin-block: 50px;
-  }
-  
-}

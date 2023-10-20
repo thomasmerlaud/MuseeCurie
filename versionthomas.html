@@ -32,7 +32,7 @@
 
         <main>
             <section class="ecran_accueil">
-                <h1 class="bigtitle">Musée Curie</h1>
+                <h1>Musée Curie</h1>
                 <a href=""><button class="homepage">EN SAVOIR PLUS</button></a>
             </section>
 
@@ -44,7 +44,7 @@
                 <h2> Nos dernières actualités</h2>
                 <div id="controls-carousel" class="relative w-full" data-carousel="static">
                     <!-- Carousel wrapper -->
-                    <div id="container" class="relative overflow-hidden rounded-lg md:h-96">
+                    <div id="container" class="relative h-56 overflow-hidden rounded-lg md:h-96">
                         <!-- Item 1 -->
                         <div class="duration-700 ease-in-out" data-carousel-item="active">
                             <div class="overlay">
@@ -82,7 +82,9 @@
                             <div class="carousel-caption">
                                 <h2 class="title">La fête de la science </h2>
                                 <p class="caption-text">Retrouvez-nous au Musée Curie pour la Fête de la science du 7 au
-                                    14 octobre.Samedi 7, mercredi 11 & et samedi 14 octobre, entre 14h et 16h.<br> ... lire plus</p>
+                                    14 octobre.Samedi 7, mercredi 11 & et samedi 14 octobre, entre 14h et 16h,<br>venez
+                                    participer avec vos enfants à notre nouvel atelier-jeu sur une thématique phare du
+                                    musée "Les mystères de la radioactivité" <br> ... lire plus</p>
                             </div>
                         </div>
                         <!-- Item 4 -->
@@ -98,40 +100,33 @@
                                     de l'Institut du radium et de la Fondation Curie. ... lire plus</p>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="button-container">
+                        <!-- Slider controls -->
                         <button type="button"
-                                
-                                data-carousel-prev>
-                                <span
-                                    class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-900 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                                    <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true"
-                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                                        <path style="color:white;" stroke="currentColor" stroke-linecap="round"
-                                            stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4" />
-                                    </svg>
-                                    <span class="sr-only">Previous</span>
-                                </span>
-                            </button>
-                            <div class="carousel-button flex space-x-3">
-                                <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-                                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-                                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-                                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
-                            </div>
-                            <button type="button"
-                                data-carousel-next>
-                                <span
-                                    class="button-arrow inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-900 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                                    <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true"
-                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                                        <path style="color:white;" stroke="currentColor" stroke-linecap="round"
-                                            stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
-                                    </svg>
-                                    <span class="sr-only">Next</span>
-                                </span>
-                            </button>
+                            class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                            data-carousel-prev>
+                            <span
+                                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                                <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                    <path style="color:white;" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4" />
+                                </svg>
+                                <span class="sr-only">Previous</span>
+                            </span>
+                        </button>
+                        <button type="button"
+                            class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                            data-carousel-next>
+                            <span
+                                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                                <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                    <path style="color:white;" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
+                                </svg>
+                                <span class="sr-only">Next</span>
+                            </span>
+                        </button>
                     </div>
 
             </section>
@@ -187,37 +182,20 @@
                     </article>
 
                     <article class="gallery__item--5 gallery__item">
-                        <a href="#ressources">
-                            <div class="overlay">
-                                <h3>Documentation</h3>
-                                <p class="p_ressource5">Si vous cherchez des informations sur la famille Curie et Joliot-Curie, leurs découvertes et leurs prix Nobel, parcourez notre documentation en ligne.</p>
-                            </div>
-                        </a>
+                        <h3>Documentation</h3>
                     </article>
 
                     <article class="gallery__item--6 gallery__item">
-                        <a href="#ressources">
-                            <div class="overlay">
-                                <h3>Nous soutenir</h3>
-                                <p class="p_ressource">Le Musée Curie a besoin de vous pour mener à bien ses missions de conservation, d’étude et de diffusion de la culture scientifique. </p>
-                            </div>
-                        </a>
+                        <h3>Nous soutenir</h3>
                     </article>
 
                     <article class="gallery__item--7 gallery__item">
-                        <a href="#ressources">
-                            <div class="overlay">
-                                <h3>Curiosités numériques</h3>
-                                <p class="p_ressource7">Si vous cherchez des informations sur la famille Curie et Joliot-Curie, leurs découvertes et leurs prix Nobel, parcourez notre documentation en ligne.</p>
-                            </div>
-                        </a>
+                        <h3>Curiosités numériques</h3>
                     </article>
 
                 </div>
     </div>
     </section>
-
-
 
 
     <section id="booking" class="booking">
@@ -324,7 +302,9 @@
                 </div>
             </section>
         </nav>
+
         <img class="logo_footer" src="logomc.svg" alt="logo">
+
         <nav class="mentions">
             <ul class="liste2_footer">
                 <li>2023 © Tous droits reservés </li>
